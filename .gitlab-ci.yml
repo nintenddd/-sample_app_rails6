@@ -1,10 +1,11 @@
-image: ubuntu:latest
+image: ruby:2.5
 
 test:
   stage: test
   script:
   - apt-get update -qy
   - apt-get upgrade -y
+  - curl -sL https://deb.nodesource.com/setup_10.x | bash -
   - apt-get install -y nodejs
   - apt-get install -y ruby
   - bundle install --path /cache
