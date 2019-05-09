@@ -8,6 +8,7 @@ test:
   - curl -sL https://deb.nodesource.com/setup_10.x | bash -
   - apt-get install -y nodejs
   - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
   - rm -f Gemfile.lock
   - bundle install --path /cache
   - RAILS_ENV=test bundle exec rails webpacker:compile
