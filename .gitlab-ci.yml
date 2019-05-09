@@ -10,7 +10,6 @@ test:
   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   - apt-get install -y yarn
   - rm -f Gemfile.lock
-  - bundle update --bundler
   - bundle install --path /cache
   - RAILS_ENV=test bundle exec rails webpacker:compile
   - rails webpacker:install
