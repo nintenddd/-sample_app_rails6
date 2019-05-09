@@ -1,4 +1,4 @@
-image: ubuntu:lastest
+image: ubuntu:latest
 
 test:
   stage: test
