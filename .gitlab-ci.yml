@@ -1,4 +1,4 @@
-image: ubuntu:rolling
+image: ubuntu:lastest
 
 test:
   stage: test
