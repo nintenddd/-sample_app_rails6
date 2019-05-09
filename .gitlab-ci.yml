@@ -11,8 +11,8 @@ test:
   - export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
   - rm -f Gemfile.lock
   - bundle install --path /cache
-  - RAILS_ENV=test bundle exec rails webpacker:compile
   - rails webpacker:install
+  - RAILS_ENV=test bundle exec rails webpacker:compile
   - bundle exec rake db:create
   - bundle exec rake test
 
