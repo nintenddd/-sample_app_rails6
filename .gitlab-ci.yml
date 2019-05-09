@@ -7,8 +7,7 @@ test:
   - apt-get upgrade -y
   - curl -sL https://deb.nodesource.com/setup_10.x | bash -
   - apt-get install -y nodejs
-  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  - apt-get install -y yarn
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
   - rm -f Gemfile.lock
   - bundle install --path /cache
   - RAILS_ENV=test bundle exec rails webpacker:compile
