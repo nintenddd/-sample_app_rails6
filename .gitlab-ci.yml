@@ -5,7 +5,8 @@ test:
   script:
   - apt-get update -qy
   - apt-get upgrade -y
-  - apt-get install -y ruby nodejs
+  - apt-get install -y nodejs
+  - apt-get install -y ruby
   - bundle install --path /cache
   - RAILS_ENV=test bundle exec rails webpacker:compile
   - rails webpacker:install
