@@ -5,6 +5,7 @@ ruby '>= 2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc1'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -22,6 +23,8 @@ gem 'jbuilder', github: 'rails/jbuilder', branch: 'master'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+gem 'rails-controller-testing'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
