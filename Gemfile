@@ -21,6 +21,8 @@ gem 'jbuilder', github: 'rails/jbuilder', branch: 'master'
 # Use Active Model has_secure_password
 gem 'bcrypt', github: 'codahale/bcrypt-ruby', branch: 'master'
 
+gem 'rails-i18n'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
