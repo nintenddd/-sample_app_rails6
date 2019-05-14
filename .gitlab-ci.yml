@@ -14,7 +14,7 @@ test:
   - yarn install --check-files
   - rake webpacker:install
   - RAILS_ENV=test bundle exec rake webpacker:compile
-  - bundle exec rake db:create
+  - bundle exec rake db:migrate RAILS_ENV=test
   - bundle exec rake test
 
 staging:
