@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: 7644e3684d96fb49f5aa20cb5f547cb1b56b3f38
+  branch: master
+  specs:
+    bcrypt (3.1.12)
+
+GIT
   remote: https://github.com/rails/jbuilder.git
   revision: 3895a7243f3db292b0bf15513fc05494e6e50576
   branch: master
@@ -216,6 +223,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt!
   bootsnap (>= 1.4.2)
   bootstrap-sass (~> 3.4, >= 3.4.1)
   byebug
