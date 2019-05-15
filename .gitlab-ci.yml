@@ -3,7 +3,7 @@ image: ruby:2.6
 before_script:
   - apt-get update -qy
   - apt-get upgrade -y
-  - snap install --classic heroku
+  - curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 test:
   stage: test
