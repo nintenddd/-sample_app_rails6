@@ -22,6 +22,8 @@ test:
 
 staging:
   stage: deploy
+  variables:
+    HEROKU_API_KEY: $HEROKU_STAGING_API_KEY
   script:
   - gem install dpl
   - dpl --provider=heroku --app=ninten-ruby-test-staging --api-key=$HEROKU_STAGING_API_KEY
@@ -31,8 +33,11 @@ staging:
 
 production:
   stage: deploy
+  variables:
+    HEROKU_API_KEY: $HEROKU_PRODUCTION_API_KEY
   script:
   - gem install dpl
   - dpl --provider=heroku --app=ninten-ruby-test-prod --api-key=$HEROKU_PRODUCTION_API_KEY
+  - heroku run rake db:migrate  --exit-code --app ninten-ruby-test-prod
   only:
   - tags
