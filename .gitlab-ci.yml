@@ -3,7 +3,7 @@ image: ruby:2.6
 before_script:
   - apt-get update -qy
   - apt-get upgrade -y
-  - apt-get install -y heroku-toolbelt
+  - snap install --classic heroku
 
 test:
   stage: test
