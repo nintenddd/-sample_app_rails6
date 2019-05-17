@@ -23,6 +23,10 @@ gem 'jbuilder', github: 'rails/jbuilder', branch: 'master'
 # Use Active Model has_secure_password
 gem 'bcrypt', github: 'codahale/bcrypt-ruby', branch: 'master'
 
+gem 'faker', '~> 1.9', '>= 1.9.3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
+gem 'bootstrap-will_paginate', '~> 1.0'
+
 gem 'rails-i18n'
 
 # Use Active Storage variant
