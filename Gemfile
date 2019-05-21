@@ -7,7 +7,7 @@ ruby '>= 2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-gem 'rails', '~> 6.0.0.rc1'
+gem 'rails', github: 'rails/rails', branch: '6-0-stable'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
