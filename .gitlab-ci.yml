@@ -1,5 +1,11 @@
 image: ruby:2.6
 
+cache:
+  paths:
+  - node_modules/
+  - cache/
+
+
 before_script:
   - apt-get update -qy
   - apt-get upgrade -y
