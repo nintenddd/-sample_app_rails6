@@ -28,7 +28,7 @@ staging:
   - gem install dpl
   - dpl --provider=heroku --app=ninten-ruby-test-staging --api-key=$HEROKU_STAGING_API_KEY
   - heroku run rake db:migrate  --exit-code --app ninten-ruby-test-staging
-  - heroku addons:create sendgrid:starter
+  - heroku addons:create sendgrid:starter --app ninten-ruby-test-staging
   - heroku config:get SENDGRID_USERNAME
   - heroku config:get SENDGRID_PASSWORD
   only:
