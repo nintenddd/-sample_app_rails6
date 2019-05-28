@@ -28,6 +28,7 @@ staging:
   - gem install dpl
   - dpl --provider=heroku --app=$HEROKU_STAGING_APP --api-key=$HEROKU_STAGING_API_KEY
   - heroku run rake db:migrate  --exit-code --app $HEROKU_STAGING_APP
+  - heroku addons:destroy sendgrid --app $HEROKU_STAGING_APP --confirm $HEROKU_STAGING_APP
   - heroku addons:create sendgrid:starter --app $HEROKU_STAGING_APP --confirm=confirm
   - heroku config:get SENDGRID_USERNAME --app $HEROKU_STAGING_APP
   - heroku config:get SENDGRID_PASSWORD --app $HEROKU_STAGING_APP
@@ -42,6 +43,7 @@ production:
   - gem install dpl
   - dpl --provider=heroku --app=$HEROKU_PRODUCTION_APP --api-key=$HEROKU_PRODUCTION_API_KEY
   - heroku run rake db:migrate  --exit-code --app $HEROKU_PRODUCTION_APP
+  - heroku addons:destroy sendgrid --app $HEROKU_PRODUCTION_APP --confirm $HEROKU_PRODUCTION_APP
   - heroku addons:create sendgrid:starter --app $HEROKU_PRODUCTION_APP --confirm=confirm
   - heroku config:get SENDGRID_USERNAME --app $HEROKU_PRODUCTION_APP
   - heroku config:get SENDGRID_PASSWORD --app $HEROKU_PRODUCTION_APP
