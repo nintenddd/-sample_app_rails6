@@ -24,10 +24,9 @@ staging:
   stage: deploy
   variables:
     HEROKU_API_KEY: $HEROKU_STAGING_API_KEY
-    HEROKU_APP_NAME: $HEROKU_STAGING_APP
   script:
   - gem install dpl
-  - dpl --provider=heroku --app $HEROKU_STAGING_APP --api-key=$HEROKU_STAGING_API_KEY
+  - dpl --provider=heroku --app=$HEROKU_STAGING_APP --api-key=$HEROKU_STAGING_API_KEY
   - heroku run rake db:migrate  --exit-code --app $HEROKU_STAGING_APP
   - heroku addons:create sendgrid:starter --app $HEROKU_STAGING_APP
   - heroku config:get SENDGRID_USERNAME --app $HEROKU_STAGING_APP
@@ -39,10 +38,9 @@ production:
   stage: deploy
   variables:
     HEROKU_API_KEY: $HEROKU_PRODUCTION_API_KEY
-    HEROKU_APP_NAME: $HEROKU_PRODUCTION_APP
   script:
   - gem install dpl
-  - dpl --provider=heroku --app $HEROKU_PRODUCTION_APP --api-key=$HEROKU_PRODUCTION_API_KEY
+  - dpl --provider=heroku --app=$HEROKU_PRODUCTION_APP --api-key=$HEROKU_PRODUCTION_API_KEY
   - heroku run rake db:migrate  --exit-code --app $HEROKU_PRODUCTION_APP
   - heroku addons:create sendgrid:starter --app $HEROKU_PRODUCTION_APP
   - heroku config:get SENDGRID_USERNAME --app $HEROKU_PRODUCTION_APP
