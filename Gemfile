@@ -24,6 +24,8 @@ gem 'jbuilder', github: 'rails/jbuilder', branch: 'master'
 gem 'bcrypt', github: 'codahale/bcrypt-ruby', branch: 'master'
 
 gem 'faker', '~> 1.9', '>= 1.9.3'
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'bootstrap-will_paginate', '~> 1.0'
 
@@ -59,6 +61,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'fog', '~> 2.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
