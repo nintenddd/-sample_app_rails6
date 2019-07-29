@@ -25,7 +25,7 @@ gem 'bcrypt', github: 'codahale/bcrypt-ruby', branch: 'master'
 
 gem 'faker', '~> 1.9', '>= 1.9.3'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
-gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+gem 'mini_magick', '~> 4.9'
 gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'bootstrap-will_paginate', '~> 1.0'
 
